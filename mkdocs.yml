@@ -1,4 +1,18 @@
-site_name: Go Packages
+site_name: Go Package Notes
 site_url: https://mydomain.org/gopkg-notes
+repo_url: https://github.com/Jinvic/gopkg-notes
+site_description: some notes about go packages
+site_author: Jinvic
 theme:
   name: material
+nav:
+  - Home: 'README.md'
+  - Others: 'others.md'
+  - Notes:
+    - websocket: 'notes/gorilla-websocket.md'
+    - ssessions: 'notes/gorilla-sessions.md'
+    - viper: 'notes/viper.md'
+    - zap: 'notes/zap.md'
+    - jwt: 'notes/jwt.md'
+    - uuid: 'notes/google-uuid.md'
+    - zip: 'notes/archive-zip.md'
