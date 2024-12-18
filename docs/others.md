@@ -96,3 +96,11 @@ Go跨平台GUI工具包
 ### NilAway
 
 [NilAway](https://github.com/uber-go/nilaway)
+
+## 命令行工具
+
+### go-blueprint
+
+- [go-blueprint](https://github.com/Melkeydev/go-blueprint)
+
+> 快速生成 Go Web 项目结构的工具。这是一个用于快速搭建 Go 语言 Web 项目的命令行工具，集成了 Chi、Gin、Fiber、Echo 等多种流行的 Go 框架。它支持选择 MySQL、Postgres、Redis 等主流数据库，还提供了 WebSocket 和 Docker 等高级设置。用户只需选择技术栈，即可生成一套完整的 Go Web 项目架子。
