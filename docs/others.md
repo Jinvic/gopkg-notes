@@ -114,3 +114,7 @@ Go跨平台GUI工具包
 ### cast
 
 `github.com/spf13/cast`
+
+### slice
+
+`github.com/duke-git/lancet/v2/slice`
