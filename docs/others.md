@@ -115,6 +115,6 @@ Go跨平台GUI工具包
 
 `github.com/spf13/cast`
 
-### slice
+### lo
 
-`github.com/duke-git/lancet/v2/slice`
+`github.com/samber/lo`
