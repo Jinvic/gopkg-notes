@@ -118,3 +118,7 @@ Go跨平台GUI工具包
 ### lo
 
 `github.com/samber/lo`
+
+### gofakeit
+
+`github.com/brianvoe/gofakeit`
