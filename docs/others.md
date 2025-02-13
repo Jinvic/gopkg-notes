@@ -115,9 +115,13 @@ Go跨平台GUI工具包
 
 `github.com/spf13/cast`
 
-### lo
+### samber
 
 `github.com/samber/lo`
+`github.com/samber/do`
+`github.com/samber/mo`
+
+samber的这几个包都很实用，而且命名也很有意思，有空研究一下。
 
 ### gofakeit
 
