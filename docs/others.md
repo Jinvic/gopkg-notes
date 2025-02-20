@@ -126,3 +126,12 @@ samber的这几个包都很实用，而且命名也很有意思，有空研究�
 ### gofakeit
 
 `github.com/brianvoe/gofakeit`
+
+批量生产假数据
+
+## go-linq
+
+`github.com/ahmetb/go-linq/v3`
+
+ language integrated query (LINQ) 语言集成查询
+ 可以像sql一样查询可迭代的数据结构
