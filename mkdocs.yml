@@ -31,6 +31,7 @@ nav:
     - jwt: 'notes/jwt.md'
     - uuid: 'notes/google-uuid.md'
     - zip: 'notes/archive-zip.md'
+    - lo: 'notes/samber-lo.md'
 
 plugins:
   - search:
