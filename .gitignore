@@ -1,4 +1,5 @@
-/.vscode
-/site
+.vscode
+.venv
 
-.justfile
+/site
+/dist
