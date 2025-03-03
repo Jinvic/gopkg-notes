@@ -105,6 +105,21 @@ Go跨平台GUI工具包
 
 > 快速生成 Go Web 项目结构的工具。这是一个用于快速搭建 Go 语言 Web 项目的命令行工具，集成了 Chi、Gin、Fiber、Echo 等多种流行的 Go 框架。它支持选择 MySQL、Postgres、Redis 等主流数据库，还提供了 WebSocket 和 Docker 等高级设置。用户只需选择技术栈，即可生成一套完整的 Go Web 项目架子。
 
+## 懒得分类
+
+### go-sail
+
+`github.com/keepchen/go-sail`
+
+一个轻量的渐进式web框架，使用Go语言实现。内置集成了多种常见的组件。
+新框架，观望一下。
+
+### Goh
+
+`github.com/OblivionOcean/Goh`
+
+项目说明：一款Go语言的预编译快速模板引擎。
+
 ## TODO LIST
 
 ### singleflight
@@ -129,7 +144,7 @@ samber的这几个包都很实用，而且命名也很有意思，有空研究�
 
 批量生产假数据
 
-## go-linq
+### go-linq
 
 `github.com/ahmetb/go-linq/v3`
 
