@@ -122,14 +122,6 @@ Go跨平台GUI工具包
 
 ## TODO LIST
 
-### singleflight
-
-`golang.org/x/sync/singleflight`
-
-### cast
-
-`github.com/spf13/cast`
-
 ### samber
 
 `github.com/samber/lo`
@@ -148,5 +140,19 @@ samber的这几个包都很实用，而且命名也很有意思，有空研究�
 
 `github.com/ahmetb/go-linq/v3`
 
- language integrated query (LINQ) 语言集成查询
- 可以像sql一样查询可迭代的数据结构
+language integrated query (LINQ) 语言集成查询
+可以像sql一样查询可迭代的数据结构
+
+### sync
+
+`sync`
+
+标准库，实现了基础的同步原语，有空多看看。
+
+`golang.org/x/sync/errgroup`
+
+对 `sync.WaitGroup` 的封装，额外提供错误返回功能。
+
+`golang.org/x/sync/singleflight`
+
+合并相同请求，降低查询数据库次数。
