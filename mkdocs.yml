@@ -32,6 +32,7 @@ nav:
     - uuid: 'notes/google-uuid.md'
     - zip: 'notes/archive-zip.md'
     - lo: 'notes/samber-lo.md'
+    - cast: 'notes/cast.md'
     - validator: 'notes/validator.md'
 
 plugins:
