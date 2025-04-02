@@ -18,7 +18,13 @@ viper.SetConfigType("yaml")       // 当没有设置特定的文件后缀名时�
 viper.AddConfigPath("./")         // 在当前文件夹下寻找
 viper.AddConfigPath("$HOME/")     // 使用变量
 viper.AddConfigPath(".")          // 在工作目录下查找
-err := viper.ReadInConfig() //读取配置
+viper.ReadInConfig()              // 读取配置
+viper.WatchConfig()               // 监控并重载
+
+// 钩子函数
+viper.OnConfigChange(func(e fsnotify.Event) {
+fmt.Println("配置文件已更改:", e.Name)
+})
 ```
 
 ## 访问配置方法
