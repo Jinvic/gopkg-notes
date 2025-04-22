@@ -156,3 +156,9 @@ language integrated query (LINQ) 语言集成查询
 `golang.org/x/sync/singleflight`
 
 合并相同请求，降低查询数据库次数。
+
+### robfig/cron
+
+`github.com/robfig/cron/v3`
+
+很实用的定时任务库，cron表达式也有学习价值。
