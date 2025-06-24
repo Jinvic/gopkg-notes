@@ -169,3 +169,9 @@ language integrated query (LINQ) 语言集成查询
 `github.com/robfig/cron/v3`
 
 很实用的定时任务库，cron表达式也有学习价值。
+
+### huh
+
+`github.com/charmbracelet/huh`
+
+终端交互
