@@ -24,14 +24,17 @@ nav:
   - Home: 'README.md'
   - Others: 'others.md'
   - Notes:
-    - websocket: 'notes/gorilla-websocket.md'
-    - ssessions: 'notes/gorilla-sessions.md'
+    - gorilla:
+      - websocket: 'notes/gorilla-websocket.md'
+      - ssessions: 'notes/gorilla-sessions.md'
+    - samber:
+      - lo: 'notes/samber-lo.md'
+      - do: 'notes/samber-do.md'
     - viper: 'notes/viper.md'
     - zap: 'notes/zap.md'
     - jwt: 'notes/jwt.md'
     - uuid: 'notes/google-uuid.md'
     - zip: 'notes/archive-zip.md'
-    - lo: 'notes/samber-lo.md'
     - cast: 'notes/cast.md'
     - validator: 'notes/validator.md'
 
