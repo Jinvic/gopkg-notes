@@ -1,6 +1,6 @@
-# archive/zip
+# zip
 
-[archive/zip](https://pkg.go.dev/archive/zip)
+[zip](https://pkg.go.dev/archive/zip)
 
 压缩解压,go的标准库
 
