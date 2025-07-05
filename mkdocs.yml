@@ -12,9 +12,9 @@ theme:
     - navigation.instant.progress
     # - navigation.tabs
     # - navigation.tabs.sticky
-    - navigation.expand
+    # - navigation.expand
     - navigation.path
-    # - navigation.indexes
+    - navigation.indexes
     - navigation.top
     - search.suggest
     - search.highlight
@@ -25,28 +25,34 @@ nav:
   - Others: 'others.md'
   - Notes:
     - Standard:
+      - "notes/standard/index.md"
       - archive:
         - zip: 'notes/standard/archive/zip.md'
     - ThridParty:
+      - "notes/thirdparty/index.md"
       - gorilla:
-        - websocket: 'notes/thirdparty/gorilla/websocket.md'
         - ssessions: 'notes/thirdparty/gorilla/sessions.md'
+        - websocket: 'notes/thirdparty/gorilla/websocket.md'
       - samber:
-        - lo: 'notes/thirdparty/samber/lo.md'
         - do: 'notes/thirdparty/samber/do.md'
+        - lo: 'notes/thirdparty/samber/lo.md'
       - spf13:
-        - viper: 'notes/thirdparty/spf13/viper.md'
         - cast: 'notes/thirdparty/spf13/cast.md'
+        - viper: 'notes/thirdparty/spf13/viper.md'
     - Others:
-      - zap: 'notes/others/zap.md'
+      - "notes/others/index.md"
       - jwt: 'notes/others/jwt.md'
+      - swag: 'notes/others/swag.md'
       - uuid: 'notes/others/uuid.md'
       - validator: 'notes/others/validator.md'
-      - swag: 'notes/others/swag.md'
+      - zap: 'notes/others/zap.md'
 
 plugins:
   - search:
       lang:
         - zh
         - en
+
+markdown_extensions:
+  - def_list
         
