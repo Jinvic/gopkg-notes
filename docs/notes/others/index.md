@@ -5,6 +5,5 @@
 - [jwt](./jwt.md)
 - [swag](./swag.md)
 - [uuid](./uuid.md)
-- [validator](./- [validator](./jwt.md)
-.md)
+- [validator](./validator.md)
 - [zap](./zap.md)
