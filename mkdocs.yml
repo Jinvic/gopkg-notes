@@ -24,19 +24,25 @@ nav:
   - Home: 'README.md'
   - Others: 'others.md'
   - Notes:
-    - gorilla:
-      - websocket: 'notes/gorilla-websocket.md'
-      - ssessions: 'notes/gorilla-sessions.md'
-    - samber:
-      - lo: 'notes/samber-lo.md'
-      - do: 'notes/samber-do.md'
-    - viper: 'notes/viper.md'
-    - zap: 'notes/zap.md'
-    - jwt: 'notes/jwt.md'
-    - uuid: 'notes/google-uuid.md'
-    - zip: 'notes/archive-zip.md'
-    - cast: 'notes/cast.md'
-    - validator: 'notes/validator.md'
+    - Standard:
+      - archive:
+        - zip: 'notes/standard/archive/zip.md'
+    - ThridParty:
+      - gorilla:
+        - websocket: 'notes/thirdparty/gorilla/websocket.md'
+        - ssessions: 'notes/thirdparty/gorilla/sessions.md'
+      - samber:
+        - lo: 'notes/thirdparty/samber/lo.md'
+        - do: 'notes/thirdparty/samber/do.md'
+      - spf13:
+        - viper: 'notes/thirdparty/spf13/viper.md'
+        - cast: 'notes/thirdparty/spf13/cast.md'
+    - Others:
+      - zap: 'notes/others/zap.md'
+      - jwt: 'notes/others/jwt.md'
+      - uuid: 'notes/others/uuid.md'
+      - validator: 'notes/others/validator.md'
+      - swag: 'notes/others/swag.md'
 
 plugins:
   - search:
