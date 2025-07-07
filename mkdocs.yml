@@ -25,11 +25,13 @@ nav:
   - Others: 'others.md'
   - Notes:
     - Standard:
-      - "notes/standard/index.md"
+      - 'notes/standard/index.md'
       - archive:
         - zip: 'notes/standard/archive/zip.md'
+      - context:
+        - 'notes/standard/context/index.md'
     - ThridParty:
-      - "notes/thirdparty/index.md"
+      - 'notes/thirdparty/index.md'
       - gorilla:
         - ssessions: 'notes/thirdparty/gorilla/sessions.md'
         - websocket: 'notes/thirdparty/gorilla/websocket.md'
@@ -40,7 +42,7 @@ nav:
         - cast: 'notes/thirdparty/spf13/cast.md'
         - viper: 'notes/thirdparty/spf13/viper.md'
     - Others:
-      - "notes/others/index.md"
+      - 'notes/others/index.md'
       - jwt: 'notes/others/jwt.md'
       - swag: 'notes/others/swag.md'
       - uuid: 'notes/others/uuid.md'
