@@ -5,6 +5,10 @@
 - [并发 | Golang 中文学习文档](https://golang.halfiisland.com/essential/senior/110.concurrency.html#context)
 - [详解context包，看这一篇就够了 - Golang梦工厂 - 博客园](https://www.cnblogs.com/asong2020/articles/13662174.html)
 
+**补充阅读**：
+
+- [深度解密Go语言之context](https://www.cnblogs.com/qcrao-2018/p/11007503.html)
+
 上下文（context）是在go中是非常常见的概念之一，平时做api开发时也经常见到。但一直这么迷迷糊糊地用也不是办法，还是尝试了解一下。
 
 上下文这个概念与并发有关。在go中，控制并发有channel，waitgroup，context，以及传统的锁控制等。其中channel用户协程间通信，waitgroup用于控制协程数量，而context的主要应用场景则为子孙协程层层嵌套。
