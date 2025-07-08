@@ -1,6 +1,6 @@
 # gorilla/websocket
 
-`go get github.com/gorilla/websocket`
+`github.com/gorilla/websocket`
 
 [参考](https://cloud.tencent.com/developer/article/2365666)
 
@@ -58,15 +58,17 @@ type Conn struct {
 
 以gin框架为例
 
+### 建立连接
+
 ```go
 var upgrader = websocket.Upgrader{} // use default options
 
 func main() {
- route := gin.Default()
+ router := gin.Default()
  router.GET("/ws", func(c *gin.Context) {
   wsHandler(c.Writer, c.Request)
  })
- route.Run("localhost:8080")
+ router.Run("localhost:8080")
 }
 
 func wsHandler(w http.ResponseWriter, r *http.Request) {
@@ -87,8 +89,6 @@ func wsHandler(w http.ResponseWriter, r *http.Request) {
 
 ## 客户端示例
 
-以gin框架为例
-
 ```go
  //服务器地址 websocket 统一使用 ws://
  url := "ws://localhost:8080/ws"
@@ -108,4 +108,89 @@ func wsHandler(w http.ResponseWriter, r *http.Request) {
   _, data, err := conn.ReadMessage()
   fmt.Println("client receive message: ", string(data))
  }
+```
+
+## 收发消息
+
+```go
+for {
+    messageType, p, err := conn.ReadMessage()
+    if err != nil {
+        log.Println(err)
+        return
+    }
+    if err := conn.WriteMessage(messageType, p); err != nil {
+        log.Println(err)
+        return
+    }
+}
+```
+
+- `messageType`: `int`，消息类型，值为 `websocket.BinaryMessage` 或 `websocket.TextMessage`
+- `p`: `[]byte`，消息内容。
+
+也可以使用 `io.Reader` 或 `io.WriteCloser` 收发消息：
+
+```go
+for {
+    messageType, r, err := conn.NextReader()
+    if err != nil {
+        return
+    }
+    w, err := conn.NextWriter(messageType)
+    if err != nil {
+        return err
+    }
+    if _, err := io.Copy(w, r); err != nil {
+        return err
+    }
+    if err := w.Close(); err != nil {
+        return err
+    }
+}
+```
+
+## 控制消息
+
+```go
+func (c *Conn) WriteControl(messageType int, data []byte, deadline time.Time) error
+
+func (c *Conn) SetCloseHandler(h func(code int, text string) error)
+func (c *Conn) SetPingHandler(h func(appData string) error)
+func (c *Conn) SetPongHandler(h func(appData string) error)
+```
+
+也可以正常使用`WriteMessage()`或`NextWriter()`发送控制消息。
+
+控制消息包括`CloseMessage`、`PingMessage` 和 `PongMessage`。
+
+可以通过SetHandler设置接收到控制消息时的回调，示例：
+
+```go
+func Ping() {
+    conn := GetConn()
+    defer conn.Close()
+
+    done := make(chan struct{})
+
+    conn.SetPongHandler(func(appData string) error {
+        done <- struct{}{}
+        return nil
+    })
+
+    conn.WriteMessage(websocket.PingMessage, []byte("ping"))
+
+    go func() {
+        conn.ReadMessage()
+    }()
+
+    select {
+    case <-time.After(time.Second * 5):
+        fmt.Println("Server is dead: timeout")
+        return
+    case <-done:
+        fmt.Println("Server is alive")
+        return
+    }
+}
 ```
