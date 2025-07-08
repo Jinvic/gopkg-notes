@@ -37,7 +37,7 @@ cobra-cli add create -p 'configCmd' # 使用 -p 向 config 命令添加子命令
       main.go
 ```
 
-## 命令示例
+## 命令定义
 
 ```go
 package cmd
@@ -62,7 +62,52 @@ var versionCmd = &cobra.Command{
 }
 ```
 
-- `Use`: 具体命令
+- `Use`: 使用方法
 - `Short`: 简短介绍
 - `Long`: 详细介绍
 - `Run`: 具体逻辑
+
+## 设置标志
+
+标志同时在命令内使用和init中绑定，所以需要定义为外部变量。
+
+### 解析变量
+
+常用的变量类型有string,int,bool等，有`Var`和`P`两个后缀，其中：
+
+- `Var`: 带Var表示需要传入指针接收值，不带则直接返回值的指针；
+- `P`: 带P表示同时指定短名称和长名称，不带则只支持长名称。
+
+以string为例：
+
+```go
+func String(name string, value string, usage string) *string
+func StringP(name, shorthand string, value string, usage string) *string
+func StringVar(p *string, name string, value string, usage string)
+func StringVarP(p *string, name, shorthand string, value string, usage string)
+```
+
+### 本地和持久化
+
+有两种方式设置标志，分别表示本地和持久化：
+
+- `Flags()`: 本地标志，只在当前命令有效；
+- `PersistentFlags()`: 持久化标志，在当前命令及其子命令有效。
+
+示例：
+
+```go
+// 本地标志
+rootCmd.Flags().StringVarP(&Source, "source", "s", "", "Source directory to read from")
+// 持久化标志
+rootCmd.PersistentFlags().BoolVarP(&Verbose, "verbose", "v", false, "verbose output")
+```
+
+### 必选标志
+
+标志默认是可选的，但也可以通过 `MarkFlagRequired()` 主动声明为必选，当未设置时将报错。示例：
+
+```go
+rootCmd.Flags().StringVarP(&Region, "region", "r", "", "AWS region (required)")
+rootCmd.MarkFlagRequired("region")
+```
