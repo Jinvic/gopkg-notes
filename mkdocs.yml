@@ -28,8 +28,8 @@ nav:
       - 'notes/standard/index.md'
       - archive:
         - zip: 'notes/standard/archive/zip.md'
-      - context:
-        - 'notes/standard/context/index.md'
+      - bytes: 'notes/standard/bytes.md'
+      - context: 'notes/standard/context.md'
     - ThridParty:
       - 'notes/thirdparty/index.md'
       - gorilla:
