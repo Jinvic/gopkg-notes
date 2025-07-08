@@ -54,11 +54,11 @@ type Conn struct {
 
 `isServer` 字段来区分我们是否用Conn作为客户端还是服务端，也就是说说gorilla/websocket中同时编写客户端程序和服务器程序，但是一般是Web应用程序使用单独的前端作为客户端程序。
 
-## 服务端示例
+## 建立连接
+
+### 服务端示例
 
 以gin框架为例
-
-### 建立连接
 
 ```go
 var upgrader = websocket.Upgrader{} // use default options
@@ -87,7 +87,7 @@ func wsHandler(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-## 客户端示例
+### 客户端示例
 
 ```go
  //服务器地址 websocket 统一使用 ws://
