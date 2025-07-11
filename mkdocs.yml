@@ -30,6 +30,9 @@ nav:
         - zip: 'notes/standard/archive/zip.md'
       - bytes: 'notes/standard/bytes.md'
       - context: 'notes/standard/context.md'
+    - Official:
+      - 'notes/official/index.md'
+      - RabbitMQ: 'notes/official/rabbitmq.md'
     - ThridParty:
       - 'notes/thirdparty/index.md'
       - gorilla:
