@@ -9,12 +9,6 @@
 - [中文文档](https://www.rabbitmq.cn/tutorials/tutorial-one-go)
 - [英文文档](https://rabbitmq.com/tutorials/tutorial-four-go)
 
----
-
-[TOC]
-
----
-
 `amqp091-go` 是RabiitMQ提供的官方go库。
 
 ## 基本概念
