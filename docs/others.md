@@ -187,3 +187,18 @@ language integrated query (LINQ) 语言集成查询
 `github.com/charmbracelet/huh`
 
 终端交互
+
+### gws
+
+`github.com/lxzan/gws`
+websocket封装
+
+### melody
+
+websocket封装
+
+### watermill
+
+`github.com/ThreeDotsLabs/watermill`
+
+消息流处理
