@@ -39,6 +39,7 @@ var (
 func init() {
     Cron = cron.New()
     AddSchedules()
+    Cron.Start()
 }
 
 // 添加定时任务
