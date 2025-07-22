@@ -47,6 +47,7 @@ nav:
         - viper: 'notes/thirdparty/spf13/viper.md'
     - Others:
       - 'notes/others/index.md'
+      - cron: 'notes/others/cron.md'
       - jwt: 'notes/others/jwt.md'
       - swag: 'notes/others/swag.md'
       - uuid: 'notes/others/uuid.md'
