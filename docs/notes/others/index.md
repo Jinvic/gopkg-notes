@@ -4,6 +4,7 @@
 
 - [cron](./cron.md)
 - [jwt](./jwt.md)
+- [resty](./resty.md)
 - [swag](./swag.md)
 - [uuid](./uuid.md)
 - [validator](./validator.md)

@@ -49,6 +49,7 @@ nav:
       - 'notes/others/index.md'
       - cron: 'notes/others/cron.md'
       - jwt: 'notes/others/jwt.md'
+      - resty: 'notes/others/resty.md'
       - swag: 'notes/others/swag.md'
       - uuid: 'notes/others/uuid.md'
       - validator: 'notes/others/validator.md'
