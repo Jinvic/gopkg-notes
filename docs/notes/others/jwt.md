@@ -26,7 +26,6 @@ claims可以使用预定义的`jwt.RegisteredClaims`，也可以使用`jwt.MapCl
 secret := []byte("my secret")
 token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
  "username": "admin",
- "password": "123456",
  "role": "admin",
 })
 tokenString, err := token.SignedString(secret)
