@@ -9,3 +9,4 @@
 - [uuid](./uuid.md)
 - [validator](./validator.md)
 - [zap](./zap.md)
+- [lancet](./lancet.md)
