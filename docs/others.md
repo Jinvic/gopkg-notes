@@ -11,15 +11,7 @@ restful http 客户端
 
 - [Go 每日一库之 resty](https://darjun.github.io/2021/06/26/godailylib/resty/)
 
-## asaskevich/govalidator
-
-验证器
-
-- [Go每日一库之82：govalidator](https://juejin.cn/post/7289249524325711908)
-
 ## go-playground/validator/v10
-
-另一个验证器，刚开始把这两个搞混了。
 
 gin 框架的默认验证器
 
@@ -202,3 +194,11 @@ websocket封装
 `github.com/ThreeDotsLabs/watermill`
 
 消息流处理
+
+### Web框架
+
+- gin
+- echo
+- fiber
+- [chi](https://github.com/go-chi/chi)
+
