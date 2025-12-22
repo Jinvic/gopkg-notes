@@ -31,11 +31,18 @@ jobs:
                 mkdocs build
 
             # 部署到服务器
-            - name: Sync files
-              uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+            - name: Deploy to server
+              uses: easingthemes/ssh-deploy@v5.1.0
               with:
-                server: ${{ secrets.FTP_SERVER }}
-                username: ${{ secrets.FTP_USER }}
-                password: ${{ secrets.FTP_PASS }}
-                local-dir: ${{ github.workspace }}/site/
-                server-dir: ./gopkg/
+                SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+                ARGS: "-rlgoDzvc --delete"
+                SOURCE: ./site/
+                REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+                REMOTE_USER: ${{ secrets.REMOTE_USER }}
+                TARGET: ${{ secrets.REMOTE_TARGET }}
+                SCRIPT_BEFORE: |
+                  echo "🔧 开始部署..."
+                  echo "时间: $(date)"
+                SCRIPT_AFTER: |
+                  echo "✅ 部署完成"
+                  echo "时间: $(date)"
