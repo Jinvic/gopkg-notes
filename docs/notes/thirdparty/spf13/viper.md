@@ -6,10 +6,6 @@
 
 基本用法如下：
 
-## 设置默认值
-
-`viper.SetDefault(key,value)`
-
 ## 读取配置文件
 
 ```go
@@ -20,6 +16,14 @@ viper.AddConfigPath("$HOME/")     // 使用变量
 viper.AddConfigPath(".")          // 在工作目录下查找
 viper.ReadInConfig()              // 读取配置
 viper.WatchConfig()               // 监控并重载
+
+// 设置默认值
+v.SetDefault("services.book.host", "localhost")
+v.SetDefault("services.book.port", 8081)
+
+// 反序列化到结构体
+var cfg Config
+viper.Unmarshal(&cfg)
 
 // 钩子函数
 viper.OnConfigChange(func(e fsnotify.Event) {
