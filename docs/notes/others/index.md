@@ -10,3 +10,4 @@
 - [validator](./validator.md)
 - [zap](./zap.md)
 - [lancet](./lancet.md)
+- [lumberjack](./lumberjack.md)
