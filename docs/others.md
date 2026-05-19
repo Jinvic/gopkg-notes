@@ -209,3 +209,7 @@ websocket封装
 - echo
 - fiber
 - [chi](https://github.com/go-chi/chi)
+
+### koanf
+
+更轻量的配置管理
