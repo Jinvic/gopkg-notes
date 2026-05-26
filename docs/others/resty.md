@@ -29,7 +29,7 @@ c.R().
 //     /search?search=kitchen%20papers&size=large
 ```
 
-**map[string]string**:
+**`map[string]string`**:
 
 ```go
 c.R().
@@ -68,7 +68,7 @@ c.R().
 
 ## 表单参数
 
-**map[string]string**:
+**`map[string]string`**:
 
 ```go
 client.R().
@@ -103,7 +103,7 @@ c.R().
 //     /v1/users/sample@sample.com/details
 ```
 
-**map[string]string**:
+**`map[string]string`**:
 
 ```go
 c.R().
@@ -120,7 +120,7 @@ c.R().
 
 ## 请求体类型
 
-**struct & map[string]string**:
+**struct & `map[string]string`**:
 
 对于结构化请求体，将自动转换为`application/json`。
 

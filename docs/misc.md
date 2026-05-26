@@ -1,4 +1,6 @@
-# 其他
+# Misc
+
+随手记的一些note&todo，懒得整理。
 
 ## gin-contrib/sessions
 

@@ -1,8 +1,10 @@
 # source .venv/bin/activate
 # deactivate
 
-install:
-    pip install mkdocs-material
+set shell := ["powershell.exe", "-c"]
 
 build:
-    mkdocs build -d dist
+    zensical build
+
+serve:
+    zensical serve
