@@ -4,7 +4,9 @@
 
 参考：
 
+- [CEL | Common Expression Language](https://cel.dev/?hl=zh-cn)
 - [CEL-Go Codelab](https://codelabs.developers.google.com/codelabs/cel-go?hl=zh-cn#0)
+- [cel.dev/cel-go/cel - Go Packages](https://pkg.go.dev/cel.dev/cel-go/cel)
 
 ## Hello World
 
